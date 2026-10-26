@@ -1,0 +1,35 @@
+# ---------- Python ----------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- Editor / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Artefak yang dibangkitkan ulang (tidak perlu di-commit) ----------
+# Dataset benchmark ~72 MB; dibuat ulang deterministik (seed=42) oleh scripts/benchmark.py
+data/bench/
+
+# Berkas sementara tulis-atomik milik consumer
+*.tmp
+
+# ---------- dbt ----------
+# target/ (compiled, run, manifest, index.html, dll.) dibuat ulang oleh `dbt run` / `dbt docs generate`.
+# Bukti dokumentasi dbt ada di screenshoots/E3_dbt_docs_model.png dan E4_dbt_lineage.png.
+dbt_project/target/
+dbt_project/dbt_packages/
+# dbt.log berisi path absolut mesin lokal; ringkasan hasil dbt ada di logs/E_dbt_run.txt & E_dbt_test.txt
+dbt_project/logs/dbt.log
+# ID anonim pengguna dbt
+dbt_project/.user.yml
+
+# ---------- Rahasia / konfigurasi lokal ----------
+.env
+*.env
