@@ -2,7 +2,7 @@
 
 Pipeline data end-to-end untuk analisis transaksi e-commerce (data **sintetis**): ingestion batch/API → streaming Kafka → data contract Pydantic → transformasi Polars + benchmark → DuckDB → dbt (model dimensional, tes, dokumentasi).
 
-Brief tugas lengkap ada di [Mini_Project.md](Mini_Project.md). Laporan akhir (diagram pipeline, keputusan desain, hasil pengujian, keterbatasan, pembagian pekerjaan) ada di folder [docs/](docs).
+Brief tugas lengkap ada di [Mini_Project.md](Mini_Project.md).
 
 - **Mode:** individu
 - **Tools:** Python 3.11, Pandas, PyArrow, Polars, Pydantic v2, kafka-python, Docker Compose (Apache Kafka 3.9.0, KRaft single-node), DuckDB, dbt-core 1.12.6 + dbt-duckdb 1.11.0
