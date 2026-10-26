@@ -1,0 +1,11 @@
+name: dpw
+version: "1.0.0"
+config-version: 2
+profile: dpw
+model-paths: ["models"]
+models:
+  dpw:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

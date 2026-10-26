@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: dim_customer
+    description: "Satu baris per customer yang punya order valid."
+    columns:
+      - name: customer_id
+        description: "Kunci customer."
+        data_tests: [unique, not_null]
+  - name: dim_product_category
+    description: "Satu baris per kategori produk."
+    columns:
+      - name: product_category
+        description: "Kunci kategori."
+        data_tests: [unique, not_null]
+  - name: fct_orders
+    description: "Satu baris per order valid, dengan metrik gross/net."
+    columns:
+      - name: order_id
+        description: "Kunci bisnis order."
+        data_tests: [unique, not_null]
+      - name: customer_id
+        description: "FK ke dim_customer."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customer')
+                field: customer_id
+      - name: product_category
+        description: "FK ke dim_product_category."
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_product_category')
+                field: product_category
+  - name: mart_daily_sales
+    description: "Penjualan diakui (paid+shipped) per tanggal, kategori, metode bayar."
