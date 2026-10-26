@@ -1,0 +1,8 @@
+experiment,variant,rows,file_mb,median_s,min_s,repeats,machine
+pandas_vs_polars,pandas,500000,35.2,0.2626,0.2427,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
+pandas_vs_polars,polars_eager,500000,35.2,0.1366,0.1212,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
+pandas_vs_polars,polars_lazy,500000,35.2,0.1004,0.0982,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
+skew_normal,pandas_groupby,500000,35.2,0.0366,0.0341,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
+skew_normal,polars_groupby,500000,35.2,0.0095,0.0089,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
+skew_skew,pandas_groupby,500000,35.2,0.0314,0.0301,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
+skew_skew,polars_groupby,500000,35.2,0.0363,0.0079,5,"OS=Windows-10-10.0.26200-SP0 | CPU=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD | cores=12 | RAM=16.4 GB | python=3.11.9 | pandas=3.1.0 | polars=2.0.0"
